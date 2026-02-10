@@ -1,0 +1,37 @@
+------ Graph Types ------
+- Direction: 1. Directed
+             2. Undirected
+
+- weight   : 1. Weighted
+             2. Unweighted
+
+- Cycle    : 1. Cyclic
+             2. Acyclic
+
+            # Cyclic    * Undirected Cyclic Graph  |  * Directed Cyclic Graph
+                         Node ----- Node           |
+                            \      /               |     Node <----> Node
+                             \    /                |
+                              Node                 |
+
+
+            # Acyclic        Node-----Node      or     Node-------Node
+                            /   \
+                           /     \
+                        Node    Node
+
+----- Input Graph -----
+- Adjacency Matrix
+- Adjacency List
+- Edge List
+
+
+* check 2 nodes connected or not:
+adj_mat     -> O(1)
+adj_list    -> O(N)
+edge_list   -> O(N)
+
+* check a single node connections
+adj_list    -> O(N) // one of the best way
+
+* 
