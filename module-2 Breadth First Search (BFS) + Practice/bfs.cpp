@@ -2,7 +2,6 @@
 using namespace std;
 
 vector<int> adj_list[101];
-
 bool vis_array[101];
 
 void bfs(int src)
