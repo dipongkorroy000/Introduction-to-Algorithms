@@ -25,9 +25,18 @@ int main()
     //     edge_list[i].second = b;
     // }
 
-    for (int i = 0; i < e; i++)
-    {
-        cout << edge_list[i].first << " " << edge_list[i].second << endl;
+    // print ---
+    // for (int i = 0; i < e; i++)
+    // {
+    //     cout << edge_list[i].first << " " << edge_list[i].second << endl;
+    // }
+    // alternative ---
+    // for(pair<int, int> p : edge_list){
+    //     cout << p.first << " " << p.second << endl;
+    // }
+    // alternative ---
+    for(auto p : edge_list){
+        cout << p.first << " " << p.second << endl;
     }
 
     return 0;

@@ -1,8 +1,8 @@
------- Graph Types ------
-- Direction: 1. Directed
-             2. Undirected
+------ Graph Types ------                    
+- Direction: 1. Directed                  * Graph vs Tree 
+             2. Undirected                - main difference -> Cycle detection
 
-- weight   : 1. Weighted
+- weight   : 1. Weighted                  * Graph -> Tree -> Binary Tree -> Binary Search Tree
              2. Unweighted
 
 - Cycle    : 1. Cyclic
@@ -33,5 +33,3 @@ edge_list   -> O(N)
 
 * check a single node connections
 adj_list    -> O(N) // one of the best way
-
-* 

@@ -22,8 +22,8 @@ void dfs(int si, int sj)
     for (int i = 0; i < 4; i++) // complexity O(V) = O(n*m)
     {
         int ci, cj;
-        ci = si - move_vec[i].first;
-        cj = sj - move_vec[i].second;
+        ci = si + move_vec[i].first;
+        cj = sj + move_vec[i].second;
 
         if (vis_ary[ci][cj] == false && valid_check(ci, cj) == true)
             dfs(ci, cj);
@@ -60,10 +60,6 @@ int main()
  *
  * out ->
  * 1 2
- * 2 2
- * 2 3
- * 1 3
- * 0 3
  * 0 2
  * 0 1
  * 1 1
@@ -71,4 +67,8 @@ int main()
  * 2 0
  * 1 0
  * 0 0
+ * 2 2
+ * 2 3
+ * 1 3
+ * 0 3
  */
