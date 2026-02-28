@@ -1,0 +1,5 @@
+0 to 0 shortest distance : 0
+0 to 1 shortest distance : 6
+0 to 2 shortest distance : 5
+0 to 3 shortest distance : 4
+0 to 4 shortest distance : 9

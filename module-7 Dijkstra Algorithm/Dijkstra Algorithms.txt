@@ -1,0 +1,3 @@
+BFS - Breadth First Search -> Not handle weighted graph
+
+So Using -> Dijkstra Algorithms for weighted graph handling
