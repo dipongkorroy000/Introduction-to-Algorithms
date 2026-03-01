@@ -8,7 +8,7 @@ int dis_ary[101];                     // 2|{0, 7},  {1, 1}, {4, 5}, {3, 1} |
 void dijkstra(int src)                // 4|{1, 3},  {2, 5}, {3, 5} |
 {
     queue<pair<int, int>> que;
-    que.push({src, 0});
+    que.push({src, 0}); // {source, distance}
 
     dis_ary[src] = 0;
 
@@ -51,7 +51,7 @@ int main()
     for (int i = 0; i < n; i++)
         dis_ary[i] = INT_MAX;
 
-    dijkstra(0); // source = 0;
+    dijkstra(0); // source = 0; time complexity - O(V) and O(E) nested = O(V * E)
 
     for (int i = 0; i < n; i++)
         cout << "0 to " << i << " shortest distance : " << dis_ary[i] << endl;
@@ -72,7 +72,7 @@ int main()
  * 3 4 5               3---------4
  *                          5
  *                      source = 0
- * 
+ *
  * out -> single source shortest distances =
  * 0 to 0 shortest distance : 0
  * 0 to 1 shortest distance : 6
