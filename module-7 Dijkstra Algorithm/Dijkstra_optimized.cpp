@@ -7,7 +7,7 @@ int dis_ary[101];                     // 2|{0, 7},  {1, 1}, {4, 5}, {3, 1} |
                                       // 3|{0, 4},  {2, 1}, {4, 5} |
 void dijkstra(int src)                // 4|{1, 3},  {2, 5}, {3, 5} |
 {
-    // using priority queue for optimized
+    // using priority_queue for optimized & priority_queue using heap data structure
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pri_que;
     pri_que.push({0, src}); // {distance, source}
 
@@ -16,7 +16,7 @@ void dijkstra(int src)                // 4|{1, 3},  {2, 5}, {3, 5} |
     while (!pri_que.empty()) // complexity O(V)
     {
         pair<int, int> par = pri_que.top();
-        pri_que.pop();
+        pri_que.pop(); // = complexity - log(V)
 
         int par_node = par.second;
         int par_dis = par.first;
@@ -29,7 +29,7 @@ void dijkstra(int src)                // 4|{1, 3},  {2, 5}, {3, 5} |
             if (par_dis + child_dis < dis_ary[child_node])
             {
                 dis_ary[child_node] = par_dis + child_dis;
-                pri_que.push({dis_ary[child_node], child_node});
+                pri_que.push({dis_ary[child_node], child_node}); // complexity - log(V)
             }
         }
     }
@@ -52,7 +52,7 @@ int main()
     for (int i = 0; i < n; i++)
         dis_ary[i] = INT_MAX;
 
-    dijkstra(0); // source = 0; time complexity - O(V) and O(E) not nested = O(V + E)
+    dijkstra(0); // source = 0; time complexity - O(V) and O(E) not nested = O(Vlog(V) + Elog(V))
 
     for (int i = 0; i < n; i++)
         cout << "0 to " << i << " shortest distance : " << dis_ary[i] << endl;
