@@ -52,7 +52,7 @@ int main()
     for (int i = 0; i < n; i++)
         dis_ary[i] = INT_MAX;
 
-    dijkstra(0); // source = 0; time complexity - O(V) and O(E) not nested = O(Vlog(V) + Elog(V))
+    dijkstra(0); // source = 0; time complexity - O(V) and O(E) not nested => O(Vlog(V) + Elog(V)) = O((V+E)log(V)) => O((E+E)log(V)) ~ Elog(V)
 
     for (int i = 0; i < n; i++)
         cout << "0 to " << i << " shortest distance : " << dis_ary[i] << endl;
