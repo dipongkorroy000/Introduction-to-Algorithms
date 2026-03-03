@@ -1,0 +1,7 @@
+BFS - Breadth First Search -> Not handle weighted graph
+
+So Using -> Dijkstra Algorithms for weighted graph handling
+
+Dijkstra Algorithm - Not handle (negative weighted cycle) = (cycle total weighted negative) graph because that is infinite loop
+
+So Using -> Bellman Ford Algorithm for negative weighted cycle graph handling by caught infinite loop and break loop
