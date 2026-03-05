@@ -1,8 +1,10 @@
 Single Source Shortest Distance
- - BFS 
- - Dijkstra
- - Bellman-Ford
+ - BFS              - O(V + E)
+ - Dijkstra         - O(ElogV)
+ - Bellman-Ford     - O(VE)
+
+When source changing : Using Floyd-Warshall
 
 All Pair Shortest Distance
- - Floyd-Warshall
+ - Floyd-Warshall   - O(V^3)
  
