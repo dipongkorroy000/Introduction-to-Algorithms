@@ -3,15 +3,13 @@ using namespace std;
 
 vector<int> adj_list[101];
 bool vis_ary[101];
-int level_ary[101];
-int par_ary[101];
+int par_ary[101]; // parent tracking
 
 void bfs(int src)
 {
     queue<int> que;
     que.push(src);
     vis_ary[src] = true;
-    level_ary[src] = 0;
 
     while (!que.empty())
     {
@@ -20,11 +18,10 @@ void bfs(int src)
 
         for (int child : adj_list[par])
         {
-            if (!vis_ary[child])
+            if (vis_ary[child] == false)
             {
                 que.push(child);
                 vis_ary[child] = true;
-                level_ary[child] = level_ary[par] + 1;
                 par_ary[child] = par;
             }
         }
@@ -45,9 +42,8 @@ int main()
         adj_list[b].push_back(a);
     }
 
-    memset(vis_ary, false, sizeof(vis_ary));  // vis_ary all value = false
-    memset(level_ary, -1, sizeof(level_ary)); // level_ary all value = -1
-    memset(par_ary, -1, sizeof(par_ary));     // par_ary all value = -1
+    memset(vis_ary, false, sizeof(vis_ary)); // vis_ary all value = false
+    memset(par_ary, -1, sizeof(par_ary));    // par_ary all value = -1
 
     int src, dst;
     cin >> src >> dst;
@@ -55,7 +51,7 @@ int main()
     bfs(src);
 
     int node = dst;
-    vector<int > path_vec;
+    vector<int> path_vec;
 
     while (node != -1)
     {
@@ -66,7 +62,8 @@ int main()
 
     reverse(path_vec.begin(), path_vec.end());
 
-    for(int x : path_vec){
+    for (int x : path_vec)
+    {
         cout << x << " ";
     }
 

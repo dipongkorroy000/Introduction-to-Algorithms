@@ -3,7 +3,7 @@ using namespace std;
 
 vector<int> adj_list[101];
 bool vis_array[101];
-int level_array[101];
+int level_array[101]; // level tracking
 
 void bfs(int src)
 {
@@ -21,7 +21,7 @@ void bfs(int src)
 
         for (int child : adj_list[par])
         {
-            if (!vis_array[child])
+            if (vis_array[child] == false)
             {
                 que.push(child);
                 vis_array[child] = true;

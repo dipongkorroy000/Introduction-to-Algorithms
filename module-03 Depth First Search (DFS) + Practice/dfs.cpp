@@ -11,9 +11,12 @@ void dfs(int src)
     vis_ary[src] = true;
 
     for (int child : adj_list[src])
-        if (!vis_ary[child]) dfs(child);
-
-    return;
+    {
+        if (!vis_ary[child])
+        {
+            dfs(child);
+        }
+    }
 }
 
 int main()

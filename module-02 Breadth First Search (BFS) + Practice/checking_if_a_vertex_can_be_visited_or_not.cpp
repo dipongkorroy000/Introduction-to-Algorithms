@@ -19,7 +19,7 @@ void bfs(int src)
 
         for (int child : adj_list[par])
         {
-            if (!vis_array[child])
+            if (vis_array[child] == false)
             {
                 que.push(child);
                 vis_array[child] = true;

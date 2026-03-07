@@ -26,10 +26,10 @@ void dfs(int si, int sj)
         cj = sj + move_vec[i].second;
 
         if (vis_ary[ci][cj] == false && valid_check(ci, cj) == true)
+        {
             dfs(ci, cj);
+        }
     }
-
-    return;
 }
 
 int main()

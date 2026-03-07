@@ -17,10 +17,13 @@ void bfs(int src)
 
         cout << par << " ";
 
-        for (int child : adj_list[par]) // complexity O(edge)
+        for (int child : adj_list[par]) // complexity O(E)
         {
-            if(!vis_array[child]) que.push(child);
-            vis_array[child] = true;
+            if (vis_array[child] == false)
+            {
+                que.push(child);
+                vis_array[child] = true;
+            }
         }
     }
 }
@@ -54,8 +57,8 @@ int main()
  * 3 2                              3     4
  * 4 6                            /  \   /  \
  * 3 5                           2     5     6
- * 4 5 
- * 
+ * 4 5
+ *
  * out ->
- * 0 1 3 4 2 5 6 
+ * 0 1 3 4 2 5 6
  */
