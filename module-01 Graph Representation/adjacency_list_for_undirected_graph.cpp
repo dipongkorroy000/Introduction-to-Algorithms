@@ -8,7 +8,7 @@ int main()
 
     vector<int> adj_list[n]; // array of vector
 
-    while (n--)
+    while (e--)
     {
         int a, b;
         cin >> a >> b;
@@ -17,7 +17,7 @@ int main()
         adj_list[b].push_back(a);
     }
 
-    for (int i = 0; i < e; i++)
+    for (int i = 0; i < n; i++)
     {
         cout << i << " -> ";
         for (int j : adj_list[i])
@@ -39,10 +39,10 @@ int main()
  * 3 4
  *
  * out ->
- * 0 -> 1 2 3 
- * 1 -> 0 3 
- * 2 -> 0 
- * 3 -> 0 1 4 
- * 4 -> 3 
- * 
+ * 0 -> 1 2 3
+ * 1 -> 0 3
+ * 2 -> 0
+ * 3 -> 0 1 4
+ * 4 -> 3
+ *
  */

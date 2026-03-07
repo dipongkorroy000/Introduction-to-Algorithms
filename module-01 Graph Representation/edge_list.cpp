@@ -7,16 +7,17 @@ int main()
     cin >> n >> e;
 
     vector<pair<int, int>> edge_list; // array of vector
-    for (int i = 0; i < n; i++)
+
+    while (e--)
     {
         int a, b;
         cin >> a >> b;
-        
+
         edge_list.push_back({a, b});
     }
     // alternative ---
     // vector<pair<int, int>> edge_list(n); // array of vector
-    // for (int i = 0; i < n; i++)
+    // for (int i = 0; i < e; i++)
     // {
     //     int a, b;
     //     cin >> a >> b;
@@ -35,7 +36,8 @@ int main()
     //     cout << p.first << " " << p.second << endl;
     // }
     // alternative ---
-    for(auto p : edge_list){
+    for (auto p : edge_list)
+    {
         cout << p.first << " " << p.second << endl;
     }
 
