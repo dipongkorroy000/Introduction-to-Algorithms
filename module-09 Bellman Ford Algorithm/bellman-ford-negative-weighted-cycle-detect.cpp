@@ -51,7 +51,7 @@ void bellman_ford()
     {
         // cout << "No negative weighted cycle" << endl;
         for (int i = 0; i < n; i++)
-            cout << i << " -> " << dis_ary[i] << endl;
+            cout << "0 to " << i << " -> " << dis_ary[i] << endl;
     }
 }
 
@@ -81,7 +81,7 @@ int main()
 }
 
 /**
- * in ->                  3
+ * in ->                  2
  * 4 4              2 --------- 1
  * 0 2 5            |           |
  * 0 3 12         5 |           | 3
@@ -89,10 +89,10 @@ int main()
  * 1 3 3            0 --------- 3
  *
  * out ->
- * 0 -> 0
- * 1 -> 7
- * 2 -> 5
- * 3 -> 10
+ * 0 to 0 -> 0
+ * 0 to 1 -> 7
+ * 0 to 2 -> 5
+ * 0 to 3 -> 10
  *
  *
  * in ->
@@ -112,9 +112,9 @@ int main()
  * 3 1 -2            2 --- 3
  *                      2
  * out ->
- * 0 -> 0
- * 1 -> 5
- * 2 -> 8
- * 3 -> 10
+ * 0 to 0 -> 0
+ * 0 to 1 -> 5
+ * 0 to 2 -> 8
+ * 0 to 3 -> 10
  * 
  */
