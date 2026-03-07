@@ -6,28 +6,28 @@ int main()
     int nodes, edges;
     cin >> nodes >> edges;
 
-    int adj_mat[nodes][edges];
+    int adj_mat[nodes][nodes];
 
     // for (int i = 0; i < nodes; i++)
-    //     for (int j = 0; j < edges; j++)
+    //     for (int j = 0; j < nodes; j++)
     //         adj_mat[i][j] = 0;
     // alternative--
     memset(adj_mat, 0, sizeof(adj_mat)); // all value = 0
 
-    for(int i = 0; i< nodes; i++)
+    for (int i = 0; i < edges; i++)
     {
         int a, b;
         cin >> a >> b;
 
         adj_mat[a][b] = 1;
-        adj_mat[b][a] = 1;  // when undirected graph
+        adj_mat[b][a] = 1; // when undirected graph
 
         adj_mat[i][i] = 1;
     }
 
     for (int i = 0; i < nodes; i++)
     {
-        for (int j = 0; j < edges; j++)
+        for (int j = 0; j < nodes; j++)
             cout << adj_mat[i][j] << " ";
 
         cout << endl;
@@ -46,9 +46,9 @@ int main()
  * 3 4
  *
  * out ->
- * 1 1 1 1 0 
- * 1 1 0 1 0 
- * 1 0 1 0 0 
- * 1 1 0 1 1 
- * 0 0 0 1 1 
+ * 1 1 1 1 0
+ * 1 1 0 1 0
+ * 1 0 1 0 0
+ * 1 1 0 1 1
+ * 0 0 0 1 1
  */
