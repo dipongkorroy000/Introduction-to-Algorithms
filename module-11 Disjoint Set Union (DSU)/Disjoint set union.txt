@@ -1,0 +1,18 @@
+Disjoint Set Union (DSU), also known as Union-Find,
+is a data structure that efficiently manages a collection of disjoint (non-overlapping) sets.
+It supports two primary operations:
+
+Find(x): Determines the representative (leader) of the set containing element x.
+This helps check if two elements belong to the same set.
+
+Union(x, y): Merges the sets containing elements x and y into a single set. 
+DSU is widely used in graph algorithms,
+
+Example:
+A = {1, 2, 3}; B = {4, 5, 6};
+
+A ∩ B = {} // it is empty ~ no common element ~ Disjoint Set
+
+This Disjoint Set- Groups or Sets A and B
+
+Disjoint Set Union: A ∪ B = {1, 2, 3, 4, 5, 6}
