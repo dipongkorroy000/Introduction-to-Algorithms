@@ -44,14 +44,13 @@ int main()
 
         Edge obj = Edge(a, b, w);
         edge_list.push_back(obj);
-
         // edge_list.push_back(Edge(b, a, w)); // undirected graph
     }
 
     for (int i = 0; i < n; i++)
         dis_ary[i] = INT_MAX;
 
-    dis_ary[0] = 0;
+    dis_ary[0] = 0; // source 0
 
     bellman_ford(); // total complexity O(V * E)
 
