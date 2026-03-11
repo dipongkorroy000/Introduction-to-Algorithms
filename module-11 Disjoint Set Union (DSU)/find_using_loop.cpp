@@ -5,10 +5,9 @@ int par_ary[101];
 
 int find(int node)
 {
-
     while (par_ary[node] != -1) // complexity O(N)
     {
-        cout << node << " ";
+        // cout << node << " ";
         node = par_ary[node];
     }
 
@@ -26,7 +25,25 @@ int main()
     par_ary[4] = 5;
     par_ary[5] = 3;
 
-    cout << find(4) << endl;
+    int leader = find(4);
+    cout << leader << endl;
+
+    // for (int i = 0; i < 6; i++)
+    //     cout << i << " -> " << par_ary[i] << endl;
 
     return 0;
 }
+
+/**
+ * clg -> 4 5 3 1
+ *
+ * out -> 1
+ * 
+ * clg ->
+ * 0 -> 1
+ * 1 -> -1
+ * 2 -> 1
+ * 3 -> 1
+ * 4 -> 5
+ * 5 -> 3
+ */

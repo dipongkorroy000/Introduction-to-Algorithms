@@ -8,10 +8,9 @@ int find(int node) // complexity O(N)
     if (par_ary[node] == -1)
         return node;
 
-    // cout << node << endl;
+    // cout << node << " ";
 
     int leader = find(par_ary[node]);
-
     return leader;
 }
 
@@ -26,21 +25,21 @@ int main()
     par_ary[4] = 5;
     par_ary[5] = 3;
 
-    int parent = find(4);
+    int leader = find(4);
+    cout << leader << endl;
 
-    cout << parent << endl;
-
-    for (int i = 0; i < 6; i++)
-    {
-        cout << i << " -> " << par_ary[i] << endl;
-    }
+    // for (int i = 0; i < 6; i++)
+    //     cout << i << " -> " << par_ary[i] << endl;
 
     return 0;
 }
 
 /**
- * out->
- * 1
+ * clg -> 4 5 3
+ *
+ * out-> 1
+ *
+ * clg ->
  * 0 -> 1
  * 1 -> -1
  * 2 -> 1

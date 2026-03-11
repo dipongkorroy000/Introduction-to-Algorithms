@@ -21,7 +21,7 @@ void dsu_union(int node1, int node2)
     int leader1 = find(node1);
     int leader2 = find(node2);
 
-    if (group_size[leader1] >= group_size[leader2])
+    if (group_size[leader2] <= group_size[leader1])
     {
         par_ary[leader2] = leader1;
 
@@ -54,13 +54,9 @@ int main()
         int leaderB = find(b);
 
         if (leaderA == leaderB)
-        {
             cycle = true;
-        }
         else
-        {
             dsu_union(a, b);
-        }
     }
 
     if (cycle)
@@ -80,7 +76,7 @@ int main()
  * 4 5
  * 5 3
  * 3 4
- * 
+ *
  * out ->
  * Cycle detected
  */
