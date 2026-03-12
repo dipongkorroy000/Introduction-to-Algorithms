@@ -1,0 +1,8 @@
+Key Concepts in C++:
+
+Overlapping Subproblems: The same subproblems are solved multiple times in naive recursive approaches (e.g., Fibonacci sequence).
+Optimal Substructure   : The optimal solution to a problem contains optimal solutions to its subproblems.
+
+Two Main Approaches:
+    Top-Down (Memoization): Uses recursion with a cache (e.g., std::vector) to store results of subproblems.
+    Bottom-Up (Tabulation): Iteratively builds a table from base cases up to the final solution, avoiding recursion.
